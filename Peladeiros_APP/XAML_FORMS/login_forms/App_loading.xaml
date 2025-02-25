@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Peladeiros_APP.XAML_FORMS.login_forms.App_loading">
+    <!-- Fundo com gradiente moderno -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#000428" Offset="0.0" />
+            <!-- Azul escuro -->
+            <GradientStop Color="#004e92" Offset="1.0" />
+            <!-- Azul claro -->
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid Padding="20">
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+
+            <!-- GIF animado -->
+            <Image Source="loading_app.gif"
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   IsAnimationPlaying="True"
+                   HorizontalOptions="Center"/>
+
+            <!-- Mensagem de carregamento -->
+            <Label Text="Iniciando aplicativo..."
+                   Margin="0,30,10,10"
+                   TextColor="White"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

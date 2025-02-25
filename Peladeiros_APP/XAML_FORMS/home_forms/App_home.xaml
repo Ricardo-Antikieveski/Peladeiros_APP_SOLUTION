@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Peladeiros_APP.XAML_FORMS.home_forms.App_home">
+
+    <Grid RowDefinitions="30*, 70*">
+        <!-- Grid parte User info -->
+        <BoxView Grid.Row="0" HorizontalOptions="Fill" VerticalOptions="Fill">
+            <BoxView.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#232323" Offset="0.0" />
+                    <GradientStop Color="#3A3A3A" Offset="1.0" />
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        <Grid Grid.Row="0" Padding="0">
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
+                <Border Stroke="White" StrokeThickness="2" Background="Gray" StrokeShape="RoundRectangle 100" Padding="3" HorizontalOptions="Center">
+                    <Image x:Name="profileImage" Source="profile_placeholder.png" HeightRequest="100" WidthRequest="100">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="SelectMedia" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Border>
+
+                <Label x:Name="lblUsername" Text="Ricardo Antikieveski" FontSize="16" FontFamily="FontGothamBook" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Label Text="Nível" TextColor="WhiteSmoke" FontSize="12" FontFamily="FontGothamBook" Padding="3"/>
+                    <Image Source="nivel_dima.png" HeightRequest="14" WidthRequest="14"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Grid>
+
+        <!-- Grid parte funções -->
+        <ScrollView Grid.Row="1" BackgroundColor="#282828">
+            <Border Stroke="#444" StrokeThickness="1" Padding="10">
+                <VerticalStackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+                    
+                    <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+                        <Button Text="PERFIL"
+                                BackgroundColor="Transparent"
+                                FontSize="12"
+                                TextColor="White"
+                                BorderColor="White"
+                                BorderWidth="1.2"
+                                CornerRadius="20"
+                                Padding="0,0"
+                                WidthRequest="150"
+                                HorizontalOptions="Center"/>
+
+                        <Button Text="ESTATÍSTICAS"
+                                BackgroundColor="Transparent"
+                                FontSize="12"
+                                TextColor="White"
+                                BorderColor="White"
+                                BorderWidth="1.2"
+                                CornerRadius="20"
+                                Padding="0,0"
+                                WidthRequest="150"
+                                HorizontalOptions="Center"/>
+                    </HorizontalStackLayout>
+
+                    <!-- Informações do Usuário -->
+                    <HorizontalStackLayout Spacing="30" HorizontalOptions="Center">
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            <Label Text="Curtidas" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            <Label Text="Seguidores" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                        <VerticalStackLayout HorizontalOptions="Center">
+                            <Label Text="0" TextColor="White" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                            <Label Text="Seguindo" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+
+                    <!-- Opções de Ação -->
+                    <VerticalStackLayout>
+                        <Label Text="O que deseja fazer?" TextColor="White" FontAttributes="Bold" Margin="0,20,0,15"/>
+
+                        <Border BackgroundColor="#333" StrokeThickness="0" Padding="10" >
+                            <HorizontalStackLayout Spacing="10">
+                                <ImageButton BackgroundColor="Transparent" Source="logo_montar_time_aleatorio.png" Clicked="Escalar_time_aleatorio_Clicked" />
+                                <VerticalStackLayout>
+                                    <Label Text="Escalar time aleatório" FontSize="12" TextColor="White" />
+                                    <Label Text="Você escalará um time aleatório definido na hora." FontSize="12" TextColor="Gray"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Border>
+
+                        <Border BackgroundColor="#333" StrokeThickness="0" Padding="10">
+                            <HorizontalStackLayout Spacing="10">
+                                <ImageButton BackgroundColor="Transparent" Source="logo_montar_time_pronto.png" Clicked="Escalar_time_pronto_Clicked"/>
+                                <VerticalStackLayout>
+                                    <Label Text="Escalar time pronto" FontSize="12" TextColor="White"/>
+                                    <Label Text="Escolha entre os times já configurados." FontSize="12" TextColor="Gray"/>
+                                </VerticalStackLayout>
+                            </HorizontalStackLayout>
+                        </Border>
+                    </VerticalStackLayout>
+
+                    <HorizontalStackLayout Margin="10,100,0,0" Spacing="60">
+                        <Button Text="Sair"
+                                FontSize="12"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                BorderColor="White"
+                                BorderWidth="1.2"
+                                CornerRadius="20"
+                                WidthRequest="120"
+                                HorizontalOptions="Start"/>
+
+                        <Button Text="Ajuda!"
+                                FontSize="12"
+                                BackgroundColor="Transparent"
+                                TextColor="White"
+                                BorderColor="White"
+                                BorderWidth="1.2"
+                                CornerRadius="20"
+                                WidthRequest="120"
+                                HorizontalOptions="End"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Border>
+        </ScrollView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Peladeiros_APP.XAML_FORMS.login_forms.Login_client">
+
+    <!-- Fundo com gradiente -->
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#25313B" Offset="0.0" />
+            <GradientStop Color="#4A6782" Offset="0.5" />
+            <GradientStop Color="#A8C0D9" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid Padding="25">
+        <VerticalStackLayout VerticalOptions="Center" Spacing="15">
+
+            <!-- Imagem de Login -->
+            <Image Source="logo_app.png" HeightRequest="180" WidthRequest="180" HorizontalOptions="Center"/>
+            <VerticalStackLayout>
+                <Label Text="Bem-Vindo" FontSize="20" TextColor="WhiteSmoke" HorizontalTextAlignment="Center" />
+                <Label Text="Fazer Login na sua conta" FontSize="16" TextColor="WhiteSmoke" HorizontalTextAlignment="Center" />
+            </VerticalStackLayout>
+
+            <!-- Campo de Usuário -->
+            <Border Stroke="White"
+                    StrokeThickness="2"
+                    Background="Transparent"
+                    Padding="5"
+                    StrokeShape="RoundRectangle 14">
+                <Entry x:Name="username_entry"
+                       BackgroundColor="Transparent"
+                       Placeholder="Digite seu usuário"
+                       TextColor="Black"
+                       PlaceholderColor="DarkGray"
+                       FontSize="12"
+                       Margin="0,0"
+                       HeightRequest="35"/>
+            </Border>
+
+            <!-- Campo de Senha -->
+            <Border Stroke="White"
+                    StrokeThickness="2"
+                    Background="Transparent"
+                    Padding="5"
+                    StrokeShape="RoundRectangle 14">
+                <Entry x:Name="password_entry"
+                       BackgroundColor="Transparent"
+                       Placeholder="Digite sua senha"
+                       IsPassword="True"
+                       TextColor="Black"
+                       PlaceholderColor="DarkGray"
+                       FontSize="12"
+                       Margin="0,0"
+                       HeightRequest="35"/>
+            </Border>
+
+            <!-- Botão de Login -->
+            <Button Text="Logar"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#005F99"
+                    TextColor="White"
+                    FontSize="14"
+                    CornerRadius="15"
+                    HeightRequest="20"
+                    FontAttributes="None"
+                    Padding="0,0"/>
+
+            <!-- Botão de Cadastro -->
+            <Button Text="Registrar-se"
+                    BackgroundColor="Transparent"
+                    TextColor="White"
+                    FontSize="14"
+                    BorderColor="White"
+                    BorderWidth="1"
+                    CornerRadius="15"
+                    HeightRequest="20"
+                    FontAttributes="None"/>
+
+            <!-- Ícones Sociais -->
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center" Margin="0,4,0,0">
+                <ImageButton Source="icon_google.png" 
+                             BackgroundColor="Transparent" 
+                             HeightRequest="20" WidthRequest="20" 
+                             Clicked="ImageButton_Clicked"/>
+                <ImageButton Source="icon_facebook.png" 
+                             BackgroundColor="Transparent" 
+                             HeightRequest="20" WidthRequest="20" 
+                             Clicked="ImageButton_Clicked_1"/>
+            </HorizontalStackLayout>
+
+            <!-- Indicador de carregamento -->
+            <ActivityIndicator x:Name="ACTRoda"
+                               Color="White"
+                               Opacity="10"
+                               WidthRequest="10"
+                               HeightRequest="10"
+                               IsVisible="True"
+                               IsRunning="True"
+                               Scale="1.0"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>
