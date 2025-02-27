@@ -39,7 +39,7 @@
                 <VerticalStackLayout Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
                     
                     <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
-                        <Button Text="PERFIL"
+                        <Button Text="teste"
                                 BackgroundColor="Transparent"
                                 FontSize="12"
                                 TextColor="White"
