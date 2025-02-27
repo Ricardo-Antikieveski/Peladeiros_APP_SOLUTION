@@ -10,6 +10,11 @@ public partial class Login_client : ContentPage
         NavigationPage.SetHasNavigationBar(this, false);
     }
 
+    protected override bool OnBackButtonPressed()
+    {
+        return true;
+    }
+
     private async void Button_Clicked(object sender, EventArgs e)
     {
         try
@@ -23,7 +28,6 @@ public partial class Login_client : ContentPage
             {
                 await SecureStorage.Default.SetAsync("usuario_logado", username_entry.Text);
                 await Navigation.PushAsync(new App_home());
-                
             }
             else
             {

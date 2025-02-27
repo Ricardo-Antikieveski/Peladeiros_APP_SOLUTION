@@ -16,7 +16,7 @@
 
         <Grid Grid.Row="0" Padding="0">
             <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="10">
-                <Border Stroke="White" StrokeThickness="2" Background="Gray" StrokeShape="RoundRectangle 100" Padding="3" HorizontalOptions="Center">
+                <Border Stroke="White" StrokeThickness="2" Background="Gray" StrokeShape="RoundRectangle 25" Padding="3" HorizontalOptions="Center">
                     <Image x:Name="profileImage" Source="profile_placeholder.png" HeightRequest="100" WidthRequest="100">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="SelectMedia" />
@@ -80,7 +80,7 @@
 
                     <!-- Opções de Ação -->
                     <VerticalStackLayout>
-                        <Label Text="O que deseja fazer?" TextColor="White" FontAttributes="Bold" Margin="0,20,0,15"/>
+                        <Label Text="O que deseja fazer?" TextColor="White" FontAttributes="Bold" Margin="3,20,0,15"/>
 
                         <Border BackgroundColor="#333" StrokeThickness="0" Padding="10" >
                             <HorizontalStackLayout Spacing="10">
@@ -91,7 +91,7 @@
                                 </VerticalStackLayout>
                             </HorizontalStackLayout>
                         </Border>
-
+                        <Border Stroke="WhiteSmoke" StrokeThickness="1"></Border>
                         <Border BackgroundColor="#333" StrokeThickness="0" Padding="10">
                             <HorizontalStackLayout Spacing="10">
                                 <ImageButton BackgroundColor="Transparent" Source="logo_montar_time_pronto.png" Clicked="Escalar_time_pronto_Clicked"/>
@@ -103,7 +103,7 @@
                         </Border>
                     </VerticalStackLayout>
 
-                    <HorizontalStackLayout Margin="10,100,0,0" Spacing="60">
+                    <HorizontalStackLayout Margin="25,100,0,0" Spacing="60">
                         <Button Text="Sair"
                                 FontSize="12"
                                 BackgroundColor="Transparent"
@@ -112,7 +112,8 @@
                                 BorderWidth="1.2"
                                 CornerRadius="20"
                                 WidthRequest="120"
-                                HorizontalOptions="Start"/>
+                                HorizontalOptions="Start"
+                                Clicked="Button_Close_APP"/>
 
                         <Button Text="Ajuda!"
                                 FontSize="12"
@@ -122,7 +123,8 @@
                                 BorderWidth="1.2"
                                 CornerRadius="20"
                                 WidthRequest="120"
-                                HorizontalOptions="End"/>
+                                HorizontalOptions="End"
+                                Clicked="Button_Ajuda_APP"/>
                     </HorizontalStackLayout>
                 </VerticalStackLayout>
             </Border>

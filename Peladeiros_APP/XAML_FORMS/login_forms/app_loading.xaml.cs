@@ -11,9 +11,9 @@ public partial class App_loading : ContentPage
 		Task.Run(async () =>
 		{
 			await Task.Delay(2800);
-			MainThread.BeginInvokeOnMainThread(() =>
+			MainThread.BeginInvokeOnMainThread(async () =>
 			{
-                Navigation.PushAsync(new Login_client());
+				await Navigation.PushAsync(new Login_client());
             });
 		});
 	}

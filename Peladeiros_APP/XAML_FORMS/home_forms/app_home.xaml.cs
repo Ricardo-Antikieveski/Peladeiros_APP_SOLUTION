@@ -9,9 +9,13 @@ public partial class App_home : ContentPage
 		InitializeComponent();
         NavigationPage.SetHasNavigationBar(this, false);
     }
+    protected override bool OnBackButtonPressed()
+    {
+        return true;
+    }
 
-	//Selecionar Perfil media
-	private async void SelectMedia(object sender, EventArgs e)
+    //Selecionar Perfil media
+    private async void SelectMedia(object sender, EventArgs e)
 	{
 		try
 		{
@@ -48,5 +52,15 @@ public partial class App_home : ContentPage
     private void Escalar_time_pronto_Clicked(object sender, EventArgs e)
     {
         DisplayAlert("Media Error", "Botao Escalar time pronto clicado", "OK");
+    }
+
+    private void Button_Close_APP(object sender, EventArgs e)
+    {
+        Environment.Exit(0);
+    }
+
+    private void Button_Ajuda_APP(object sender, EventArgs e)
+    {
+        DisplayAlert("Ajuda!", "Para mais ajuda acesse.\nwww.google.com", "OK");
     }
 }

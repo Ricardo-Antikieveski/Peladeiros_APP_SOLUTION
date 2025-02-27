@@ -45,6 +45,7 @@
                     Padding="5"
                     StrokeShape="RoundRectangle 14">
                 <Entry x:Name="password_entry"
+                       
                        BackgroundColor="Transparent"
                        Placeholder="Digite sua senha"
                        IsPassword="True"

@@ -14,8 +14,8 @@ namespace Peladeiros_APP
         {
             return new Window(new NavigationPage(new App_loading()))
             {
-                Width = 360,
-                Height = 800,
+                Width = 448,
+                Height = 998,
                 Title = "Peladeiros Football APP"
             };
         }
